@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Home button -->
+            <a class="navbar-brand" href="index.html">WeatherPy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- If it works it's not stupid -->
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <!-- Right aligned buttons -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Plots
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="vis1.html">Temperature Plots</a>
+                        <a class="dropdown-item" href="vis2.html">Humidity Plots</a>
+                        <a class="dropdown-item" href="vis3.html">Wind Plots</a>
+                        <a class="dropdown-item" href="vis4.html">Cloud Plots</a>
+                    </div>
+                </div>
+                <a class="btn btn-secondary" href="compare.html" role="button">Comparison</a>
+                <a class="btn btn-secondary" href="data.html" role="button">Data</a>
+            </div>
+        </nav>
+        <div>
+            <h3>
+                Analysis
+            </h3>
+
+            <p>
+                <h4>Observations and assumptions</h4>
+            </p>
+            <p>
+
+                1. The range of latitudes returned for the list of cities is within tolerances for a roughly uniform
+                distribution. There
+                is a shift to the northern latitudes, which is expected due to the higher concentration of populated
+                landmass,
+                but given the number of cities returned any trends should still be visible.
+            </p>
+            <p>
+                2. Due to the nature of latitude and the equator temperature as a function of latitude has a
+                distinctive U shape which resists
+                a linear regression model. Instead of using a difficult non-linear regression I chose to take the
+                absolute
+                value of latitude to return a measure of distance from the equator that is not biased to the Northern
+                or
+                Southern hemispheres.
+            </p>
+            <p>
+                <h4> Trends</h4>
+            </p>
+            <p>
+                1. Temperature has a statistically significant inverse coorelation with distance from the equator, as
+                seen in the Temperature plots.
+            </p>
+            <p>
+                2. Humidity also has a statistically significant inverse coorelation with distance from the equator,
+                however it is much smaller
+                (lower slope) than the relationship with Temperature, and can be seen in the Humidity plots.
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
